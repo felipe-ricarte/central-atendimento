@@ -1,6 +1,5 @@
 package br.com.felipericarte.centralatendimento.controller;
 
-
 import br.com.felipericarte.centralatendimento.controller.response.Response;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
