@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Response {
+public class Response<T> {
 
     private T data;
     private String status;

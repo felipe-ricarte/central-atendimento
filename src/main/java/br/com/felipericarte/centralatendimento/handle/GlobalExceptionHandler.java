@@ -1,7 +1,17 @@
 package br.com.felipericarte.centralatendimento.handle;
 
 
+import br.com.felipericarte.centralatendimento.controller.response.Response;
+import br.com.felipericarte.centralatendimento.controller.response.ResponseStatusEnum;
+import br.com.felipericarte.centralatendimento.exception.AtendimentoNotFoundException;
+import br.com.felipericarte.centralatendimento.exception.AtendimentoStatusAtendimentoException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import java.util.Arrays;
 
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {

@@ -1,8 +1,8 @@
 package br.com.felipericarte.centralatendimento.controller.response;
 
+import br.com.felipericarte.centralatendimento.enums.StatusDemandaEnum;
 import lombok.Builder;
 import lombok.Data;
-
 
 @Data
 @Builder

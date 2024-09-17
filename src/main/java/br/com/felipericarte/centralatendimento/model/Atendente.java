@@ -31,26 +31,20 @@ public class Atendente extends ApiModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nome", length = 255, nullable = false)
+    @Column(name = "nome", nullable = false)
     private String nome;
 
     @ManyToOne
-    @JoinColumn(name = "id_time_atendimento", nullable = false)
-    private TimeAtendimento timeAtendimento;
+    @JoinColumn(name = "id_time_chamado", nullable = false)
+    private TimeChamado timeChamado;
 
     @OneToMany(mappedBy = "atendente")
     @Where(clause = "status_atendimento = 'EM_ATENDIMENTO'")
     private List<Atendimento> atendimentos;
 
-    public AtendenteResponse toDTO() {
-        return AtendenteResponse.builder()
-                .nome(nome)
-                .build();
-    }
-
     @Override
     public String toString() {
-        return "Atendente [id=" + id + ", nome=" + nome + ", timeAtendimento=" + (!Objects.isNull(timeAtendimento) ? timeAtendimento.getNome() : "") + "]";
+        return "Atendente [id=" + id + ", nome=" + nome + ", timeChamado=" + (!Objects.isNull(timeChamado) ? timeChamado.getNome() : "") + "]";
     }
 
 }
