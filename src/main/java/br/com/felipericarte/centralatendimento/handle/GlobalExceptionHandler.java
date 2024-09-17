@@ -1,6 +1,7 @@
 package br.com.felipericarte.centralatendimento.handle;
 
 
+import org.springframework.web.bind.annotation.ControllerAdvice;
 
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {

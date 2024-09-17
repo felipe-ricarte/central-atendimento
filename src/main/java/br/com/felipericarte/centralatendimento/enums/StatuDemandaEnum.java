@@ -2,7 +2,7 @@ package br.com.felipericarte.centralatendimento.enums;
 
 import lombok.Getter;
 
-Getter
+@Getter
 public enum StatuDemandaEnum {
 
     AGUARDANDO_DEMANDA(1),
