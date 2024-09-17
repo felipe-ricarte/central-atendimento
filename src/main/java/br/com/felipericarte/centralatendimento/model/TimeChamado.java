@@ -1,6 +1,5 @@
 package br.com.felipericarte.centralatendimento.model;
 
-
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -32,7 +31,7 @@ public class TimeChamado extends ApiModel{
     private String nome;
 
     @ManyToOne
-    @JoinColumn(name = "id_tipo_", nullable = false)
+    @JoinColumn(name = "id_tipo_chma", nullable = false)
     private TipoChamado tipoChamado;
 
     @Override

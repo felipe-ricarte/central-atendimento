@@ -1,5 +1,8 @@
 package br.com.felipericarte.centralatendimento.common;
 
+import br.com.felipericarte.centralatendimento.controller.response.AtendimentoResponse;
+import br.com.felipericarte.centralatendimento.controller.response.TipoAtendimentoResponse;
+
 public class AtendimentoResponseConstants {
 	
 	public static final AtendimentoResponse Atendimento_RESPONSE_VALIDA_MOCK =

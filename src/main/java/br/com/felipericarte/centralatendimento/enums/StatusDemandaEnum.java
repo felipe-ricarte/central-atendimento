@@ -3,13 +3,16 @@ package br.com.felipericarte.centralatendimento.enums;
 import lombok.Getter;
 
 @Getter
-public enum StatuDemandaEnum {
+public enum StatusDemandaEnum {
 
     AGUARDANDO_DEMANDA(1),
     ATENDENDO_DEMANDA(2),
     FINALIZADA(3);
 
-    private  StatusDemandaEnum(Integer codigo){
+    StatusDemandaEnum(int i) {
+    }
+
+    private void StatusDemandaEnum(Integer codigo){
         this.codigo = codigo;
     }
 

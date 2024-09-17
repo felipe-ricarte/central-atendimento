@@ -1,5 +1,8 @@
 package br.com.felipericarte.centralatendimento.model;
 
+import br.com.felipericarte.centralatendimento.controller.response.TipoAtendimentoResponse;
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +16,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tipo_atendimento")
+@Table(name = "tipo_chamado")
 public class TipoChamado extends ApiModel {
 
     @Id
