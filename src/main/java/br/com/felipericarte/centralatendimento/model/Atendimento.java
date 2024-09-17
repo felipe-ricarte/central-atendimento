@@ -1,5 +1,11 @@
 package br.com.felipericarte.centralatendimento.model;
 
+import br.com.felipericarte.centralatendimento.controller.response.AtendimentoResponse;
+import br.com.felipericarte.centralatendimento.enums.StatusDemandaEnum;
+import lombok.*;
+
+import javax.persistence.*;
+import java.util.Objects;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -18,12 +24,12 @@ public class Atendimento extends ApiModel {
     private String texto;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status_atendimento", nullable = false)
-    private StatusAtendimentoEnum statusAtendimento;
+    @Column(name = "status_demanda", nullable = false)
+    private StatusDemandaEnum statusDemandaEnum;
 
     @ManyToOne
     @JoinColumn(name = "id_tipo_Atendimento", nullable = false)
-    private TipoAtendimento tipoAtendimento;
+    private TipoChamado tipoChamado;
 
     @ManyToOne
     @JoinColumn(name = "id_atendente", nullable = true)
@@ -33,15 +39,15 @@ public class Atendimento extends ApiModel {
         return AtendimentoResponse.builder()
                 .id(id)
                 .texto(texto)
-                .statusAtendimento(statusAtendimento)
-                .tipoAtendimento(tipoAtendimento.toResponse())
+                .statusDemanda(statusDemandaEnum)
+                .tipoAtendimento(tipoChamado.toResponse())
                 .atendente(!Objects.isNull(atendente) ? atendente.toDTO() : null).build();
     }
 
     @Override
     public String toString() {
-        return "Atendimentos [id=" + id + ", texto=" + texto + ", statusAtendimento=" + statusAtendimento
-                + ", tipoAtendimento=" + tipoAtendimento + ", atendente=" + (!Objects.isNull(atendente) ? atendente.getNome() : "") + "]";
+        return "Atendimentos [id=" + id + ", texto=" + texto + ", statusAtendimento=" + statusDemandaEnum
+                + ", tipoAtendimento=" + tipoChamado + ", atendente=" + (!Objects.isNull(atendente) ? atendente.getNome() : "") + "]";
     }
 
 }

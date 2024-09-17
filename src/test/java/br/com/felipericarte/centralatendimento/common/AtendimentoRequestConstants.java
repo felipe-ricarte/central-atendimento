@@ -1,5 +1,7 @@
 package br.com.felipericarte.centralatendimento.common;
 
+import br.com.felipericarte.centralatendimento.controller.request.AtendimentoRequest;
+
 public class AtendimentoRequestConstants {
 	
 	public static final AtendimentoRequest Atendimento_REQUEST_VALIDA_MOCK = AtendimentoRequest.builder()

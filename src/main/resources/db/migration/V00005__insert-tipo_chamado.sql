@@ -1,4 +1,4 @@
-INSERT INTO tipo_atendimento
+INSERT INTO tipo_chamado
 (id, nome, data_criacao)
 VALUES
 (1, 'Problemas com cartão', CURRENT_TIMESTAMP),
