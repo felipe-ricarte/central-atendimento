@@ -9,7 +9,7 @@ public enum StatuDemandaEnum {
     ATENDENDO_DEMANDA(2),
     FINALIZADA(3);
 
-    private  StatusDemandaEnum(Integer codigo){
+    private void StatusDemandaEnum(Integer codigo){
         this.codigo = codigo;
     }
 
